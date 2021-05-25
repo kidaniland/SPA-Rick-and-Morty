@@ -1,7 +1,7 @@
 const Error404 = () => {
     const view = `
         <div class="Error404">
-            <h2>Error 404</h2>
+            <img src="https://live.staticflickr.com/65535/51200952101_75b1049fbc.jpg">
         </div>
     `
     return view

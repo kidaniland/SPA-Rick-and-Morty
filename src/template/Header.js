@@ -2,11 +2,9 @@ const Header = () => {
     const view = `
         <div class="Header-main">
             <div class="header-logo">
-                <h1>
-                    <a href="/">
-                        SPA Rick and Morty
-                    </a>
-                </h1>
+                <a href="/">
+                    <img src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png">
+                </a>
             </div>
             <div class="Header-nav">
                 <a href="#/about/">About</a>
