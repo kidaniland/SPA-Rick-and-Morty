@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
-    "start": "webpack serve --open --mode development",
-    "test": "echo skipping tests"
+    "start": "webpack serve --open --mode development"
   },
   "keywords": [
     "javaScript"

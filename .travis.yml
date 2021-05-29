@@ -3,11 +3,10 @@ cache:
   directories:
     - ~/.npm
   node_js:
-    - node
+    - '12'
   git:
     depth: 3
   script:
-    - echo "skipping tests"
     - yarn build
   deploy:
     provider: pages
