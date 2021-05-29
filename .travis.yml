@@ -7,6 +7,7 @@ cache:
   git:
     depth: 3
   script:
+    - echo "skipping tests"
     - yarn build
   deploy:
     provider: pages
