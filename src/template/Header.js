@@ -1,15 +1,15 @@
 const Header = () => {
     const view = `
-        <div class="Header-main">
+        
             <div class="header-logo">
                 <a href="/">
                     <img src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png">
                 </a>
             </div>
             <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" id="faBars"></i>
             </div>
-            <nav class="header-nav">
+            <nav class="header-nav ">
                 <ul>            
                     <li>
                         <a class="active">
@@ -36,14 +36,22 @@ const Header = () => {
                     </li>  
                 </ul> 
             </nav>
-            <div class="clearfix"></div> 
-        </div>
+            <div class="clearfix"></div>
+         
     `;
-    return view
+
+    const header = document.createElement('div');
+    header.setAttribute('class', 'Header-main');
+    header.innerHTML = view;
+
+    header.querySelector('#faBars').addEventListener('click', ()=>{
+        console.log('CLICK-----');
+        const icon = header.querySelector('.fa-bars');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    });
+
+    return header
 }
 
 export default Header
-
-//<button class="tag" id= "openPage"><i class="fas fa-bars"></i></button>
-
-//https://www.youtube.com/watch?v=kEt5DCHeyJo
