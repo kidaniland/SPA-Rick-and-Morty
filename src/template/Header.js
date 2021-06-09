@@ -1,6 +1,5 @@
 const Header = () => {
     const view = `
-        
             <div class="header-logo">
                 <a href="/">
                     <img src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png">

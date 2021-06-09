@@ -6,6 +6,8 @@ body {
   font-family: 'Odibee Sans', cursive;
   width: 100%;
   height: 100vh;
+  background-image: url('https://unblast.com/wp-content/uploads/2018/10/Sky-Stars-Pattern.jpg');
+  background-repeat: repeat;
 }
 
 /*-----Main-----*/
@@ -55,9 +57,6 @@ header {
 }
 .header-nav {
   float: right;
-  /*display: flex;
-  flex-direction: unset;
-  margin-right: 5rem;*/
 }
 .clearfix {
   clear: both;
@@ -82,65 +81,16 @@ header {
   margin-right: 2rem;
   padding-right: 5rem;
   border-radius: 20px;
-  font-size: 18px;
-}
-
-/*
-.header-nav button{
-  margin-right: 2rem;
-  text-decoration: none;
-  background: transparent;
-  border: nonw;
-  border: none;
-  color: #fff;
-  font-size: 30px;
-  cursor: pointer;
-}
-.header-nav select {
-  margin-right: 2rem;
-  padding-right: 5rem;
-  border-radius: 20px;
-  font-size: 18px;
-}
-.header-nav  a{
-  text-decoration: none;
-  color: #fff;
-  margin-right: 2rem;
-  font-size: 40px;
+  font-size: 22px;
 }
 .header-nav .search{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background-color: #f3f3f3;
-  border-radius: 60px;
-  transition: 0.5s;
-  box-shadow: 0 0 0 5px #40394a;
-  margin-right: 2rem;
+  width: 200px;
+  background-color: yellowgreen;
 }
-.search .active{
-  width: 60px;
+.header-nav .search .input-search{
+  background-color: blue;
+  width: 150px;
 }
-.search .icon{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #f3f3f3;
-  border-radius: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; 
-  cursor: pointer; 
-}
-.search .icon i{
-  text-decoration: none;
-  color: #15302C;
-  font-size: 20px;
-}
-*/
 
 /*-----Section Content Characters-----*/
 .content {
@@ -156,10 +106,9 @@ header {
 }
 .Characters-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 10px;
   margin: 30px;
-  display: block;
+  display: flex;
   animation-duration: 2s;
   animation-name: fade;
   width: 20rem;
@@ -176,12 +125,23 @@ header {
   font-weight: 300;
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: #071a52;
 }
 .Characters-item a {
-  text-decoration: none;
-  color: #026C86;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 400px;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    color: #026C86;
+}
+.Characters-item a:hover {
+  transform: scale(1.05);
 }
 
 /*-----Section Content Characters Inner-----*/
@@ -196,7 +156,8 @@ header {
 .Characters-card {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 5px solid rgba(170, 208, 74, 0.5);
   margin: 0 0 20px 0;
   display: block;
   animation-duration: 2s;
@@ -210,11 +171,11 @@ header {
   border-radius: 5px 5px 0 0;
 }
 .Characters-card h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  
+  margin: 8px;
 }
 .Characters-card h3 {
   font-size: 30px;
@@ -223,16 +184,50 @@ header {
   margin: 20px;
   color: #f3f3f3;
 }
-
+.button {
+  float: right;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.button i{
+  font-size: 4rem;
+  text-decoration: none;
+  color: black;
+  transition: ease .2;
+}
+.button i:hover{
+  color: #a7ff83;
+}
 /*-----Error 404-----*/
 .Error404{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   display: flex;
-  background-color: #fff;
+  margin-top: -6rem;
+}
+.Error404 img {
+  width: 900px;
+  height: auto;
+  border-radius: 20rem;
+  border: 5px solid rgba(170, 208, 74, 0.5);
 }
 /*-----Footer-----*/
+h4 {
+  color: #a7ff83;
+  font-size: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+.Footer-pages {
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #a7ff83;
+}
 
 /*-----KeyFrames-----*/
 @keyframes fade {

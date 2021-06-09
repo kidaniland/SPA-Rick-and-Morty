@@ -8,7 +8,7 @@ const Characters = async () => {
         <div class="Characters-inner">
             <article class="Characters-card">
                 <img src="${character.image}" alt="${character.name}">
-                <h2>Name</h2>
+                <h2>${character.name}</h2>
             </article>
             <article class="Characters-card">
                 <h3>Episode: <span>${character.episode.length}</span></h3>
@@ -17,6 +17,11 @@ const Characters = async () => {
                 <h3>Gender: <span>${character.gender}</span></h3>
                 <h3>Origin: <span>${character.origin.name}</span></h3>
                 <h3>Last location: <span>${character.location.name}</span></h3>
+                <a href="/">
+                    <button class="button" type="button">
+                        <i class="fas fa-arrow-circle-left"></i>
+                    </button>
+                </a>
             </article>
         </div>
     `;
