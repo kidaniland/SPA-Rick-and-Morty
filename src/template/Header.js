@@ -9,25 +9,21 @@ const Header = () => {
                 <i class="fas fa-bars" id="faBars"></i>
             </div>
             <nav class="header-nav ">
-                <ul>            
+                <ul> 
+                    <li>
+                        <a>
+                        <form action="">
+                            <input type="text" class="search-bar" id="search-bar" placeholder="Buscar">
+                        </form>
+                        </a>
+                    </li>           
                     <li>
                         <a class="active">
-                            <select class="tag" name="a-z" id="selectOrder">
+                            <select name="a-z" id="selectOrder">
                                 <option value="ordenado">--Select order--</option>
                                 <option value="ascendente">A-Z</option>
                                 <option value="descendente">Z-A</option>
                             </select>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="search">
-                                <div class="icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                                <div class="input-search">
-                                </div>
-                            </div>
                         </a>
                     </li>
                     <li>
@@ -43,6 +39,7 @@ const Header = () => {
     header.setAttribute('class', 'Header-main');
     header.innerHTML = view;
 
+    //Barras
     header.querySelector('#faBars').addEventListener('click', ()=>{
         console.log('CLICK-----');
         const icon = header.querySelector('.fa-bars');
@@ -50,6 +47,23 @@ const Header = () => {
         icon.classList.add('fa-times');
     });
 
+    //Select
+
+    //Search
+/*
+    const searchBar = header.querySelector('#searchBar');
+    let characters = [];
+  
+    const loadCharacters = async () => {
+        try {
+            const res = await fetch('https://rickandmortyapi.com/api/character/');
+            characters = await res.json();
+            displayCharacters(characters);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+*/
     return header
 }
 
