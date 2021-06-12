@@ -1,8 +1,12 @@
 import getData from '../utils/getData';
+import searchData from '../utils/searchData';
 
 const Home = async () => {
     const characters = await getData();
-    const view = `
+    const searchCharacters = await searchData();
+    let view;
+    if(characters){
+        view = `
         <div class="Characters">
             ${characters.results.map(character => `
             <article class="Characters-item">
@@ -15,6 +19,8 @@ const Home = async () => {
             
         </div>
     `;
+    } 
+    
     return view
 }
 

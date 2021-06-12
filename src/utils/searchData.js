@@ -1,20 +1,15 @@
-import Header from '../template/Header';
+const API = 'https://rickandmortyapi.com/api/character/';
 
-const icon = Header.querySelector('.icon');
-const search = Header.querySelector('.search');
-
-icon.onclick = function (){
-    search.classList.toggle('active')
+const searchData = async (character) => {
+    console.log('Llega a CHARACTER', character);
+    try {
+        let api = `https://rickandmortyapi.com/api/character?name=${character}`;
+        let response = await fetch(api);
+        let json = await response.json(); 
+    } catch (error) {
+        console.log(error);
+    }  
 }
 
-/*
-const loadCharacters = async () => {
-    try {
-        const res = await fetch('https://rickandmortyapi.com/api/character/');
-        characters = await res.json();
-        displayCharacters(characters);
-    } catch (err) {
-        console.error(err);
-    }
-};
-*/
+export default searchData
+

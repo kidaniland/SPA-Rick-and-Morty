@@ -1,3 +1,6 @@
+import searchData from "../utils/searchData";
+import Loader from "./Loader";
+
 const Header = () => {
     const view = `
             <div class="header-logo">
@@ -12,9 +15,9 @@ const Header = () => {
                 <ul> 
                     <li>
                         <a>
-                        <form action="">
+                        <div>
                             <input type="text" class="search-bar" id="search-bar" placeholder="Buscar">
-                        </form>
+                        </div>
                         </a>
                     </li>           
                     <li>
@@ -50,20 +53,28 @@ const Header = () => {
     //Select
 
     //Search
-/*
-    const searchBar = header.querySelector('#searchBar');
-    let characters = [];
-  
-    const loadCharacters = async () => {
-        try {
-            const res = await fetch('https://rickandmortyapi.com/api/character/');
-            characters = await res.json();
-            displayCharacters(characters);
-        } catch (err) {
-            console.error(err);
+    const searchBar = header.querySelector('#search-bar');
+    searchBar.addEventListener('keypress', async e => {
+        if (e.target.matches('#search-bar')){
+            //console.log("--->", e.key);
+            if(e.key === "Enter"){
+                let queryCharacter = e.target.value.toLowerCase();
+                searchData(queryCharacter);
+                /*
+                try {
+                    let queryCharacter = e.target.value.toLowerCase();
+                    console.log('1--->', queryCharacter);
+                    let api = `https://rickandmortyapi.com/api/character?name=${queryCharacter}`;
+                    let response = await fetch(api);
+                    let json = await response.json(); 
+                } catch (error) {
+                    console.log(error);
+                }
+                */
+            }
         }
-    };
-*/
+    });
+
     return header
 }
 
